@@ -1,0 +1,76 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --primary-color: #FF8C00;
+  --darker-primary-color: #CC7000;
+}
+
+/* btn-primary styles */
+.btn-primary,
+.btn-primary.disabled,
+.btn-primary:disabled {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active {
+  background-color: var(--darker-primary-color);
+  border-color: var(--darker-primary-color);
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  background-color: var(--darker-primary-color);
+  border-color: var(--darker-primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.5);
+}
+
+/* btn-outline-primary styles */
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active {
+  color: var(--bs-body-bg);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.5);
+}
+
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled {
+  color: var(--primary-color);
+  background-color: var(--bs-body-bg);
+  border-color: var(--primary-color);
+}
+
+/* input styles */
+input[type='number']:focus,
+input[type='checkbox']:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.5);
+}
+
+input[type='checkbox']:checked {
+  background-color: var(--primary-color);
+  border-color: var(--darker-primary-color);
+}
+
+/* Mobile devices styles */
+@media (max-width: 767px) and (orientation: portrait) {
+
+  .btn-outline-primary:hover {
+    color: var(--primary-color);
+    background-color: var(--bs-body-bg);
+  }
+}
