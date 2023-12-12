@@ -1,6 +1,10 @@
+import { useState } from 'react';
+
 import MoveButton from './MoveButton';
 
 export default function Game(props) {
+  const [move, setMove] = useState('');
+
   return (
     <main
       className='col col-md-9 col-lg-6 mx-auto px-3 py-5
@@ -23,9 +27,21 @@ export default function Game(props) {
         </div>
       </div>
 
+      <>
+        {(props.disabledButtons) ? (
+          <div className='pt-1 text-center'>
+            <div>You chose {move}.</div>
+            <div>Waiting for opponent's choice...</div>
+          </div>
+        ) : (
+          <></>
+        )}
+      </>
+
       <div className='pt-3'>
         <MoveButton
           moveType='ROCK'
+          setMoveType={setMove}
           handleMove={props.handleMove}
           disabled={props.disabledButtons}
         />
@@ -34,6 +50,7 @@ export default function Game(props) {
       <div className='pt-3'>
         <MoveButton
           moveType='PAPER'
+          setMoveType={setMove}
           handleMove={props.handleMove}
           disabled={props.disabledButtons}
         />
@@ -42,6 +59,7 @@ export default function Game(props) {
       <div className='pt-3 pb-4'>
         <MoveButton
           moveType='SCISSORS'
+          setMoveType={setMove}
           handleMove={props.handleMove}
           disabled={props.disabledButtons}
         />

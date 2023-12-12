@@ -15,7 +15,10 @@ export default function MoveButton(props) {
         className='w-100'
         size='lg'
         disabled={props.disabled}
-        onClick={() => { props.handleMove(props.moveType) }}
+        onClick={() => {
+          props.handleMove(props.moveType);
+          props.setMoveType(props.moveType);
+        }}
       >
         {(props.moveType) === 'ROCK' && <FaRegHandRock />}
         {(props.moveType) === 'PAPER' && <FaRegHandPaper />}
