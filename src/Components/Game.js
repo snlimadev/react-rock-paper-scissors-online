@@ -6,7 +6,7 @@ export default function Game(props) {
   const [move, setMove] = useState('');
 
   return (
-    <main className='w-100 overflow-auto mx-auto mt-5 mb-4 px-3'>
+    <main className='w-100 overflow-auto mx-auto mt-5 mb-4 px-3 py-1'>
       <div className='col col-md-9 col-lg-6 mx-auto'>
         <div className='card fs-5 fw-bold text-center mb-2'>
           <div className='card-header'>SCORE</div>

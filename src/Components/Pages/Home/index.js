@@ -25,7 +25,7 @@ export default function Home() {
         route='/'
       />
 
-      <main className='w-100 overflow-auto mx-auto mt-5 mb-4 text-center px-3'>
+      <main className='w-100 overflow-auto mx-auto mt-5 mb-4 text-center px-3 py-1'>
         <h3>Welcome to Rock Paper Scissors - Online!</h3>
 
         <h5 className='pt-2'>
