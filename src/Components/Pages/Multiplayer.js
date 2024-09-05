@@ -82,7 +82,7 @@ export default function Multiplayer() {
   //#endregion
 
   return (
-    <div className='vh-100'>
+    <div className='vh-100 d-flex flex-column justify-content-center'>
       <Header
         title={`Room ${roomCode}`}
         icon='back'

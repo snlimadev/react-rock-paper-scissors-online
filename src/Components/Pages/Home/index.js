@@ -25,7 +25,7 @@ export default function Home() {
         route='/'
       />
 
-      <main className='w-100 mx-auto text-center px-3 py-5'>
+      <main className='w-100 overflow-auto mx-auto mt-5 mb-4 text-center px-3'>
         <h3>Welcome to Rock Paper Scissors - Online!</h3>
 
         <h5 className='pt-2'>
@@ -39,7 +39,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className='col col-md-9 col-lg-6 mx-auto pt-3 pb-2'>
+        <div className='col col-md-9 col-lg-6 mx-auto pt-3'>
           <Link to='/lobby' className='btn btn-primary w-100'>
             <PiUsers /> MULTIPLAYER
           </Link>

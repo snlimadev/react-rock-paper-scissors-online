@@ -66,8 +66,8 @@ input[type='checkbox']:checked {
   border-color: var(--darker-primary-color);
 }
 
-/* Mobile devices styles */
-@media (max-width: 767px) and (orientation: portrait) {
+/* Styles for devices that don't support hover */
+@media (hover: none) {
 
   .btn-outline-primary:hover {
     color: var(--primary-color);

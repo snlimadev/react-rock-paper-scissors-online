@@ -41,43 +41,42 @@ export default function WaitingCard(props) {
   //#endregion
 
   return (
-    <main
-      className='col col-md-9 col-lg-6 mx-auto px-3 py-5
-        h-100 d-flex flex-column justify-content-center'
-    >
-      <div className='card text-center mt-1 mb-2'>
-        <div className='card-header fw-bold'>
-          Waiting for an opponent...
-        </div>
+    <main className='w-100 overflow-auto mx-auto mt-5 mb-4 px-3'>
+      <div className='col col-md-9 col-lg-6 mx-auto'>
+        <div className='card text-center'>
+          <div className='card-header fw-bold'>
+            Waiting for an opponent...
+          </div>
 
-        <div className='card-body'>
-          Please note your session will expire in 3
-          minutes if an opponent doesn't join the game.
-        </div>
+          <div className='card-body'>
+            Please note your session will expire in 3
+            minutes if an opponent doesn't join the game.
+          </div>
 
-        <OverlayTrigger
-          placement='top'
-          overlay={copiedTooltip}
-          show={copiedVisible}
-        >
+          <OverlayTrigger
+            placement='top'
+            overlay={copiedTooltip}
+            show={copiedVisible}
+          >
+            <Button
+              variant='outline-info'
+              onClick={handleCopyButtonClick}
+              className='mx-3 mb-2'
+              size='sm'
+            >
+              <FaCopy /> COPY ROOM CODE
+            </Button>
+          </OverlayTrigger>
+
           <Button
             variant='outline-info'
-            onClick={handleCopyButtonClick}
+            onClick={handleShare}
             className='mx-3 mb-2'
             size='sm'
           >
-            <FaCopy /> COPY ROOM CODE
+            <FaShareAlt /> SHARE ROOM CODE
           </Button>
-        </OverlayTrigger>
-
-        <Button
-          variant='outline-info'
-          onClick={handleShare}
-          className='mx-3 mb-2'
-          size='sm'
-        >
-          <FaShareAlt /> SHARE ROOM CODE
-        </Button>
+        </div>
       </div>
     </main>
   );

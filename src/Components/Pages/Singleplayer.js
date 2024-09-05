@@ -23,7 +23,7 @@ export default function Singleplayer() {
   }
 
   return (
-    <div className='vh-100'>
+    <div className='vh-100 d-flex flex-column justify-content-center'>
       <Header
         title='Singleplayer'
         icon='back'

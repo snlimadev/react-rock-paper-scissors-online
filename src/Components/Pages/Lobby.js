@@ -75,84 +75,83 @@ export default function Lobby() {
   //#endregion
 
   return (
-    <div className='vh-100'>
+    <div className='vh-100 d-flex flex-column justify-content-center'>
       <Header
         title='Multiplayer'
         icon='back'
         route='/'
       />
 
-      <main
-        className='col col-md-9 col-lg-6 mx-auto px-3 py-5
-          h-100 d-flex flex-column justify-content-center'
-      >
-        <div className='pt-2'>
-          <Button
-            type='primary'
-            className='w-100'
-            onClick={() => setIsCreateModalOpen(true)}
-          >
-            <FiPlusCircle /> CREATE A ROOM
-          </Button>
-        </div>
-
-        <LobbyModal
-          isModalOpen={isCreateModalOpen}
-          setIsModalOpen={setIsCreateModalOpen}
-          modalTitle='Create Room'
-          publicRoom={publicRoom}
-          setPublicRoom={setPublicRoom}
-          buttonAction={handleCreateRoom}
-          disabledButton={false}
-        />
-
-        <div className='pt-2'>
-          <Button
-            type='primary'
-            className='w-100'
-            onClick={() => setIsJoinModalOpen(true)}
-          >
-            <FiArrowRightCircle /> JOIN A ROOM
-          </Button>
-        </div>
-
-        <LobbyModal
-          isModalOpen={isJoinModalOpen}
-          setIsModalOpen={setIsJoinModalOpen}
-          modalTitle='Join Room'
-          roomCode={roomCode}
-          setRoomCode={setRoomCode}
-          buttonAction={() => handleJoinRoom('')}
-          disabledButton={disabledButton}
-        />
-
-        <div className='pt-3 pb-2'>
-          <div className='card'>
-            <div className='card-header fw-bold text-center'>
-              Public Rooms
-            </div>
-            <div
-              className='card-body text-center overflow-auto'
-              style={{ maxHeight: '30vh' }}
+      <main className='w-100 overflow-auto mx-auto mt-5 mb-4 px-3'>
+        <div className='col col-md-9 col-lg-6 mx-auto'>
+          <div>
+            <Button
+              type='primary'
+              className='w-100'
+              onClick={() => setIsCreateModalOpen(true)}
             >
-              {(availableRooms.length > 0) ? (
-                <div>
-                  {availableRooms.map((rooms) => (
-                    <div key={rooms}>
-                      <Button
-                        variant='outline-primary'
-                        onClick={() => handleJoinRoom(rooms)}
-                        className='w-100 my-1'
-                        size='sm'
-                      >
-                        <FiArrowRightCircle /> {rooms}
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <span>No public rooms available.</span>
-              )}
+              <FiPlusCircle /> CREATE A ROOM
+            </Button>
+          </div>
+
+          <LobbyModal
+            isModalOpen={isCreateModalOpen}
+            setIsModalOpen={setIsCreateModalOpen}
+            modalTitle='Create Room'
+            publicRoom={publicRoom}
+            setPublicRoom={setPublicRoom}
+            buttonAction={handleCreateRoom}
+            disabledButton={false}
+          />
+
+          <div className='pt-2'>
+            <Button
+              type='primary'
+              className='w-100'
+              onClick={() => setIsJoinModalOpen(true)}
+            >
+              <FiArrowRightCircle /> JOIN A ROOM
+            </Button>
+          </div>
+
+          <LobbyModal
+            isModalOpen={isJoinModalOpen}
+            setIsModalOpen={setIsJoinModalOpen}
+            modalTitle='Join Room'
+            roomCode={roomCode}
+            setRoomCode={setRoomCode}
+            buttonAction={() => handleJoinRoom('')}
+            disabledButton={disabledButton}
+          />
+
+          <div className='pt-3'>
+            <div className='card'>
+              <div className='card-header fw-bold text-center'>
+                Public Rooms
+              </div>
+              <div
+                className='card-body text-center overflow-auto'
+                style={{ maxHeight: '30vh' }}
+              >
+                {(availableRooms.length > 0) ? (
+                  <div>
+                    {availableRooms.map((rooms) => (
+                      <div key={rooms}>
+                        <Button
+                          variant='outline-primary'
+                          onClick={() => handleJoinRoom(rooms)}
+                          className='w-100 my-1'
+                          size='sm'
+                        >
+                          <FiArrowRightCircle /> {rooms}
+                        </Button>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <span>No public rooms available.</span>
+                )}
+              </div>
             </div>
           </div>
         </div>
