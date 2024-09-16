@@ -49,8 +49,8 @@ export default function WaitingCard(props) {
           </div>
 
           <div className='card-body'>
-            Please note your session will expire in 3
-            minutes if an opponent doesn't join the game.
+            The room code is <b>{code}</b>. Please note your session
+            will expire in 3 minutes if an opponent doesn't join the game.
           </div>
 
           <OverlayTrigger

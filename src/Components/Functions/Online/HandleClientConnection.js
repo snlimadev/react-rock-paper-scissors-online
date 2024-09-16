@@ -1,6 +1,6 @@
 import { ReadyState } from 'react-use-websocket';
 import Swal from 'sweetalert2';
-import { customSwal } from './Utils';
+import { customSwal } from '../Utils';
 
 //#region Function to handle client connection
 // Função para lidar com a conexão do cliente

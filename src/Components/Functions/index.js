@@ -1,8 +1,8 @@
-export { createOrJoinRoom } from './CreateOrJoinRoom';
-export { getAvailableRoomsList } from './GetAvailableRoomsList';
-export { getWsConnectionUrl } from './GetWsConnectionUrl';
-export { handleClientConnection } from './HandleClientConnection';
-export { handleGameRoundsMultiplayer } from './HandleGameRoundsMultiplayer';
-export { handleGameRoundsSingleplayer } from './HandleGameRoundsSingleplayer';
-export { makeMove } from './MakeMove';
-export { updateAvailableRooms } from './UpdateAvailableRooms';
+export { createOrJoinRoom } from './Online/Multiplayer/CreateOrJoinRoom';
+export { getAvailableRoomsList } from './Online/Lobby/GetAvailableRoomsList';
+export { getWsConnectionUrl } from './Online/GetWsConnectionUrl';
+export { handleClientConnection } from './Online/HandleClientConnection';
+export { handleGameRoundsMultiplayer } from './Online/Multiplayer/HandleGameRoundsMultiplayer';
+export { handleGameRoundsSingleplayer } from './Singleplayer/HandleGameRoundsSingleplayer';
+export { makeMove } from './Online/Multiplayer/MakeMove';
+export { updateAvailableRooms } from './Online/Lobby/UpdateAvailableRooms';

@@ -1,4 +1,4 @@
-import { showResultAlert } from './Utils';
+import { showResultAlert } from '../Utils';
 
 //#region Function to handle game rounds (singleplayer)
 // Função para lidar com as rodadas do jogo (um jogador)

@@ -1,4 +1,4 @@
-import { customSwal, showResultAlert } from './Utils';
+import { customSwal, showResultAlert } from '../../Utils';
 
 //#region Function to handle game rounds (multiplayer)
 // Função para lidar com as rodadas do jogo (dois jogadores)

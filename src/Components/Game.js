@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import MoveButton from './MoveButton';
 
+const MOVE_TYPES = ['ROCK', 'PAPER', 'SCISSORS'];
+
 export default function Game(props) {
   const [move, setMove] = useState('');
 
@@ -25,43 +27,26 @@ export default function Game(props) {
           </div>
         </div>
 
-        <>
-          {(props.disabledButtons) ? (
-            <div className='pt-1 text-center'>
-              <div>You chose {move}.</div>
-              <div>Waiting for opponent's choice...</div>
-            </div>
-          ) : (
-            <></>
-          )}
-        </>
+        {(props.disabledButtons) ? (
+          <div className='pt-1 text-center'>
+            <div>You chose {move}.</div>
+            <div>Waiting for opponent's choice...</div>
+          </div>
+        ) : (
+          <></>
+        )}
 
-        <div className='pt-3'>
-          <MoveButton
-            moveType='ROCK'
-            setMoveType={setMove}
-            handleMove={props.handleMove}
-            disabled={props.disabledButtons}
-          />
-        </div>
-
-        <div className='pt-3'>
-          <MoveButton
-            moveType='PAPER'
-            setMoveType={setMove}
-            handleMove={props.handleMove}
-            disabled={props.disabledButtons}
-          />
-        </div>
-
-        <div className='pt-3'>
-          <MoveButton
-            moveType='SCISSORS'
-            setMoveType={setMove}
-            handleMove={props.handleMove}
-            disabled={props.disabledButtons}
-          />
-        </div>
+        {MOVE_TYPES.map((type, index) => (
+          <div className='pt-3'>
+            <MoveButton
+              key={index}
+              moveType={type}
+              setMoveType={setMove}
+              handleMove={props.handleMove}
+              disabled={props.disabledButtons}
+            />
+          </div>
+        ))}
       </div>
     </main>
   );
