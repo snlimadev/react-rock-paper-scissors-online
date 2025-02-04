@@ -36,8 +36,17 @@ export default function Lobby() {
 
   //#region Local functions / Funções locais
   const handleCreateRoom = () => {
-    const randomCode = Math.floor(100000 + Math.random() * 900000);
-    setGameParameters('create', (publicRoom) ? 'Y' : 'N', randomCode);
+    const time = new Intl.DateTimeFormat('pt-BR', {
+      timeZone: 'America/Sao_Paulo',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    }).format(new Date()).replace(':', '');
+
+    const randomCode = Math.floor(1000 + Math.random() * 9000);
+    const roomCode = Number(String(randomCode) + String(time));
+
+    setGameParameters('create', (publicRoom) ? 'Y' : 'N', roomCode);
     navigate('/multiplayer');
   }
 

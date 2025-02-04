@@ -17,7 +17,7 @@ export default function Header(props) {
     <header
       className='header fixed-top text-white p-1
         d-flex justify-content-between align-items-center'
-      style={{ backgroundColor: '#FF8C00' }}
+      style={{ backgroundColor: 'var(--primary-color)' }}
     >
       <Link to={props.route} className='btn float-left text-white'>
         {(props.icon === 'back') && <FaArrowLeft />}

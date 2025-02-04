@@ -3,6 +3,7 @@
 :root {
   --primary-color: #FF8C00;
   --darker-primary-color: #CC7000;
+  --box-shadow-style: 0 0 0 0.2rem rgba(255, 140, 0, 0.5);
 }
 
 /* btn-primary styles */
@@ -24,7 +25,7 @@
 .btn-primary.focus {
   background-color: var(--darker-primary-color);
   border-color: var(--darker-primary-color);
-  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.5);
+  box-shadow: var(--box-shadow-style);
 }
 
 /* btn-outline-primary styles */
@@ -44,7 +45,7 @@
 .btn-outline-primary:focus,
 .btn-outline-primary.focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.5);
+  box-shadow: var(--box-shadow-style);
 }
 
 .btn-outline-primary.disabled,
@@ -58,7 +59,7 @@
 input[type='number']:focus,
 input[type='checkbox']:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.5);
+  box-shadow: var(--box-shadow-style);
 }
 
 input[type='checkbox']:checked {
