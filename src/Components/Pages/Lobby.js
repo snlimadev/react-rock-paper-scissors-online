@@ -44,9 +44,9 @@ export default function Lobby() {
     }).format(new Date()).replace(':', '');
 
     const randomCode = Math.floor(1000 + Math.random() * 9000);
-    const roomCode = Number(String(randomCode) + String(time));
+    const newRoomCode = String(randomCode) + String(time);
 
-    setGameParameters('create', (publicRoom) ? 'Y' : 'N', roomCode);
+    setGameParameters('create', (publicRoom) ? 'Y' : 'N', newRoomCode);
     navigate('/multiplayer');
   }
 
