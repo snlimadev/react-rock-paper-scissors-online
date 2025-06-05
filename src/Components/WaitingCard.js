@@ -8,7 +8,7 @@ export default function WaitingCard(props) {
   const [copiedVisible, setCopiedVisible] = useState(false);
 
   const code = props.roomCode;
-  const text = `Room code for Rock Paper Scissors - Online is ${code}`;
+  const text = `The room code for Rock Paper Scissors - Online is ${code}`;
   const url = 'https://rps-online-game.vercel.app/lobby';
   const copiedTooltip = <Tooltip>Copied</Tooltip>;
 
@@ -50,7 +50,7 @@ export default function WaitingCard(props) {
 
           <div className='card-body'>
             The room code is <b>{code}</b>. Please note your session
-            will expire in 3 minutes if an opponent doesn't join the game.
+            will expire in a few minutes if an opponent doesn't join the game.
           </div>
 
           <OverlayTrigger
